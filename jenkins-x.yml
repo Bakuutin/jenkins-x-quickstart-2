@@ -23,7 +23,7 @@ pipelineConfig:
             - --cache-repo=docker-registry.jx.jx.friendzone.bot/bakuutin/cache
             command: /kaniko/executor
             dir: /workspace/source
-            image: docker-registry.jx.jx.friendzone.bot/kaniko-project/executor:9912ccbf8d22bbafbf971124600fbb0b13b9cbd6
+            image: gcr.io/kaniko-project/executor:9912ccbf8d22bbafbf971124600fbb0b13b9cbd6
             name: build-container-build
           - command: jx step post build --image docker-registry.jx.jx.friendzone.bot/bakuutin/jenkins-x-quickstart-2:$PREVIEW_VERSION
             name: postbuild-post-build
@@ -55,7 +55,7 @@ pipelineConfig:
             - --cache-repo=docker-registry.jx.jx.friendzone.bot/bakuutin/cache
             command: /kaniko/executor
             dir: /workspace/source
-            image: docker-registry.jx.jx.friendzone.bot/kaniko-project/executor:9912ccbf8d22bbafbf971124600fbb0b13b9cbd6
+            image: gcr.io/kaniko-project/executor:9912ccbf8d22bbafbf971124600fbb0b13b9cbd6
             name: build-container-build
           - command: jx step post build --image docker-registry.jx.jx.friendzone.bot/bakuutin/jenkins-x-quickstart-2:${VERSION}
             name: build-post-build
