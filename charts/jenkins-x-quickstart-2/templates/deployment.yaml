@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: {{ .Chart.Name }}
-        image: "docker-registry.jx.jx.friendzone.bot/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "docker-registry.jx.jx.friendzone.bot/{{ .Chart.Name }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
 {{- range $pkey, $pval := .Values.env }}
