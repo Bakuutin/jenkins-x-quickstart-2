@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: bakuutin/jenkins-x-quickstart-2
+  - image: friendzone/jenkins-x-quickstart-2
     context: .
     docker: {}
   tagPolicy:
